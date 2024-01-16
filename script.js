@@ -1,8 +1,8 @@
 function generateCalendar() {
-    const startDate = new Date(document.getElementById("start-date").value);
+    const startDate = new Date(document.getElementById("datepicker-container").value);
 
     // Adjust the start date to Monday of week 0 (a week before week 1)
-    startDate.setDate(startDate.getDate() - (startDate.getDay() + 13) % 7);
+    startDate.setDate(startDate.getDate() - (startDate.getDay() + 6) % 7);
 
     // Generate iCal content
     const iCalContent = generateICalContent(startDate);
